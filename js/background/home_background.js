@@ -177,6 +177,7 @@
                             target.y = posy;
                         });
                     }
+
                     $(w).on('scroll', function() {
                         if(d.body.scrollTop > height) animateHeader = false;
                         else animateHeader = true;
@@ -191,20 +192,11 @@
                     });
 
                     return _Functions;
-                },
-
-                fadeIn : function(bgColor, lineColor) {
-                    var _this = this;
-                    console.log(_this);
-                    console.log(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-                    ctx.fillStyle = 'rgba(44, 44, 44,' + _this.active +')';
-                    ctx.fill();
                 }
-
             }
-
         _Functions.initContainer().initAnimation().addListeners();
     }
 
     $.fn._homeBackgroundFunctions();
+
 })(jQuery, window, document, TweenLite);
