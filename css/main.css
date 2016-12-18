@@ -1,0 +1,14 @@
+/**
+  @author : abhishek goswami
+  abhishekg785
+*/
+
+body {
+    margin : 0;
+    padding : 0;
+}
+
+header {
+    border : 1px solid black;
+    font-size : 2vw;
+}
