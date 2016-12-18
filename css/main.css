@@ -60,4 +60,26 @@ html,body {
     height: 100%;
 }
 
+.home {
+    height:91%;
+}
+
+.construction-demo {
+    height:300px;
+    width:100%;
+    position: absolute;
+    bottom:0px;
+    z-index : 4;
+    left:-30px;
+}
+
+/* css for the canvas of the construction part*/
+.contruction-canvas {
+    width:700px;
+    height:238px;
+    display:block;
+    border-top:none;
+    z-index:5;
+}
+
 
