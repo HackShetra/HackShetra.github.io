@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/HackShetra/HackShetra.github.io/issues"
   },
-  "homepage": "https://github.com/HackShetra/HackShetra.github.io#readme"
+  "homepage": "https://github.com/HackShetra/HackShetra.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^4.1.0",
+    "nodemon": "^1.11.0"
+  }
 }
