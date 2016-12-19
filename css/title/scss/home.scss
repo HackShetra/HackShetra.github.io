@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.titleWrapper{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin: auto;
+  text-align:center;
+  height:80px;
+  overflow:hidden;
+  width: 100%;
+  text-align:center;
+}
+h1{
+  color:#292929;
+  font-size: 80px;
+  margin:0;
+  padding:0;
+  line-height:80px;
+  height:80px;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  word-space: 4em;
+  letter-spacing: 0.05em;
+}
+h1 span{
+  position: relative;
+  display: inline-block;
+  transform: translateY(100%);
+  transition: all 0.25s cubic-bezier(0.65, 0, 0.21, 1.47) 0s;
+}
+
+.titleWrapper.ready h1 span{
+  transform: translateY(0%);
+}
+
+h1.first span{
+  background:#fafafa;
+  position:relative;
+  z-index:5;
+}
+h1.second span{
+  position:relative;
+  z-index:1;
+}
+
+$num: 1;
+
+@while $num < 20 {
+  h1.first span:nth-of-type(#{$num}) {
+    transition-delay: 0.02s * $num;
+  }
+  h1.second span:nth-of-type(#{$num}) {
+    transition-delay: 0.03s * $num + 0.05;
+  }
+
+  $num: $num + 1;
+}
+
+.titleWrapper.ready:hover h1.first span{
+  transform: translateY(-100%);
+}
+.titleWrapper.ready:hover h1.second span{
+  transform: translateY(-100%);
+}

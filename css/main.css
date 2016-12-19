@@ -1,0 +1,85 @@
+/**
+  @author : abhishek goswami
+  abhishekg785
+*/
+
+html,body {
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+    font-family: "Gotham SSm A","Gotham SSm B",Helvetica,Arial,sans-serif;
+}
+
+.page_header {
+    position: relative;
+    top : 0px;
+    margin:0 auto;
+    width:100%;
+    height : 60px;
+    display: block;
+    background: rgb(44, 44, 44);
+}
+
+.nav-list {
+    z-index: 3;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    height : 60px;
+    position:absolute;
+    right:50px;
+}
+
+.nav-list_item {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    display:table-cell;
+    height:60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list_item:hover {
+    background-color: white;
+    color: rgb(44, 44, 44);
+
+}
+
+.section {
+    position:relative;
+    left: 0;
+    top:0;
+    height: 100%;
+}
+
+.home {
+    height:91%;
+}
+
+.construction-demo {
+    height:300px;
+    width:100%;
+    position: absolute;
+    bottom:0px;
+    z-index : 4;
+    left:-30px;
+}
+
+/* css for the canvas of the construction part*/
+.contruction-canvas {
+    width:700px;
+    height:238px;
+    display:block;
+    border-top:none;
+    z-index:5;
+}
+
+
