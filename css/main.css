@@ -62,7 +62,6 @@ html,body {
 
 .home {
     height:91%;
-    background-color: red;
 }
 
 .construction-demo {
@@ -72,7 +71,6 @@ html,body {
     bottom:0px;
     z-index : 4;
     left:-30px;
-    /*border: 2px solid red;*/
 }
 
 /* css for the canvas of the construction part*/
@@ -82,20 +80,22 @@ html,body {
     display:block;
     border-top:none;
     z-index:5;
-    /*border:2px solid green;*/
     position: absolute;
     bottom:0px;
     left:0px;
 }
 
 .titleWrapper {
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
     position: absolute;
     margin: 0px;
     z-index: 5;
     left:0px;
     top:0px;
-    width: 100%;
     text-align: center;
+    width: 100%;
+    color:white;
 }
+
+
 
