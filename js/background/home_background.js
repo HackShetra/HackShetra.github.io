@@ -16,6 +16,7 @@
             points,
             target,
             animateHeader = true,
+            circleRadius = 3,
             colorHexCode = {
                 grey : '#2c2c2c',
                 white : '#fff',
@@ -82,7 +83,7 @@
 
                     // assign a circle to each point
                     for(var i in points) {
-                        var c = new this.Circle(points[i], 2, 'rgba(255,255,255,1)');
+                        var c = new this.Circle(points[i], circleRadius, 'rgba(255,255,255,1)');
                         points[i].circle = c;
                     }
 
