@@ -305,5 +305,7 @@
 
     #about-description h1{
         font-size: 2vh;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
