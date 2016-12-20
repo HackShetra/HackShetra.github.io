@@ -110,3 +110,31 @@
     height: 35px;
     border-bottom-radius: 10px;
 }
+
+@media (max-width : 960px) {
+
+    #app-develop-section {
+        width: 100%;
+        height: 50%;
+        text-align: center;
+    }
+
+    #app-develop-section .wrapper {
+        width: 100%;
+        transform: scale(0.4);
+        top:-50px;
+        left:10px;
+    }
+
+    #app-develop-description {
+        width : 100%;
+        height: 50%;
+        text-align: center;
+        top : 50%;
+        bottom: 0px;
+    }
+
+    #app-develop-description h1 {
+        font-size: 2vh;
+    }
+}

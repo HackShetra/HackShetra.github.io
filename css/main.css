@@ -168,7 +168,7 @@ html,body {
     padding: 0px;
     word-space: 4em;
     letter-spacing: 0.05em;
-    font-size: 2vw;
+    font-size: 1.6vw;
     position: relative;
     width: 100%;
     top :25%;
@@ -185,6 +185,7 @@ html,body {
     top:0px;
     height:100%;
     width:40%;
+    background: rgb(44, 44, 44);;
 }
 
 #code-section h1 {
@@ -250,4 +251,7 @@ html,body {
 #about-description a {
     text-decoration: none;
     color : rgb(255, 87, 34);
+}
+
+@media (max-width : 960px) {
 }
