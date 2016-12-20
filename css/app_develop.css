@@ -111,6 +111,26 @@
     border-bottom-radius: 10px;
 }
 
+@media (max-width : 1330px) {
+
+    #app-develop-section .wrapper {
+        transform: scale(0.5);
+        left:-40px;
+        top:23%;
+    }
+
+}
+
+@media (max-width : 990px) {
+
+    #app-develop-section .wrapper {
+        transform: scale(0.3);
+        left:-40px;
+        top:20%;
+    }
+
+}
+
 @media (max-width : 960px) {
 
     #app-develop-section {

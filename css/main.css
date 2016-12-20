@@ -216,7 +216,7 @@ html,body {
 #app-develop-section .wrapper {
     position:relative;
     left:-25px;
-    top:15%;
+    top:25%;
     transform: scale(0.6);
 }
 

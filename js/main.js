@@ -9,7 +9,8 @@
     var WindowInnerHeight,
         WindowInnerWidth,
         demoCanvas = $("#demo-canvas"),
-        aboutUsLaptopWrap = $('.wrap');
+        aboutUsLaptopWrap = $('.wrap'),
+        aboutUsAppDevelopSectionWrapper = $('#app-develop-section .wrapper');
 
     var _MainFunctions = {
 
@@ -32,6 +33,18 @@
             if(w.innerWidth < 960 && w.innerWidth > 823) {
                 aboutUsLaptopWrap.css('transform', 'scale(0.8)');
             }
+        },
+
+        ResizeAboutAppSection : function() {
+            if(w.innerWidth >= 1330) {
+                aboutUsAppDevelopSectionWrapper.css('transform', 'scale(0.6)');
+            }
+            else if(w.innerWidth < 1330 && w.innerWidth >= 1320) {
+                aboutUsAppDevelopSectionWrapper.css('transform', 'scale(0.5)');
+            }
+            else if(w.innerWidth < 1320 && w.innerWidth > 1134 ) {
+                aboutUsAppDevelopSectionWrapper.css('transform', 'scale(0.4)');
+            }
         }
     }
 
@@ -42,6 +55,7 @@
         });
         _MainFunctions.ResizeHomeBackgroundCanvas();
         _MainFunctions.ResizeAboutUsSection();
+        _MainFunctions.ResizeAboutAppSection();
     });
 
 })(jQuery, document, window);
