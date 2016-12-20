@@ -2,7 +2,6 @@
 
 .titleWrapper{
   position:absolute;
-  top:0;
   left:0;
   right:0;
   bottom:0;
@@ -11,10 +10,11 @@
   height:80px;
   overflow:hidden;
   width: 100%;
-  text-align:center;
+  color:white;
 }
 h1{
-  color:#292929;
+  //color:#292929;
+  color:white;
   font-size: 80px;
   margin:0;
   padding:0;
@@ -38,7 +38,8 @@ h1 span{
 }
 
 h1.first span{
-  background:#fafafa;
+  //background:#fafafa;
+  background: rgb(44, 44, 44);
   position:relative;
   z-index:5;
 }
