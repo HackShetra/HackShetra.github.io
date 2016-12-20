@@ -9,6 +9,7 @@ html,body {
     height:100%;
     width:100%;
     font-family: "Gotham SSm A","Gotham SSm B",Helvetica,Arial,sans-serif;
+    overflow-x: hidden;
 }
 
 .page_header {
@@ -145,8 +146,48 @@ html,body {
 .mini-section {
     /*border-bottom: 2px solid black;*/
 }
-/* css for the contact section ends here */
 
-.footer {
+/* css for the about section start here */
+.about-section {
+}
 
+#about-description {
+    width: 60%;
+    height:100%;
+    position: absolute;
+    right:0px;
+}
+
+#code-section {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    top:0px;
+    height:100%;
+    width:40%;
+}
+
+#app-develop-section {
+    height: 100%;
+    position: absolute;
+    top:0px;
+    bottom: 0px;
+    left:0px;
+    width: 40%;
+}
+
+#app-develop-section .wrapper {
+    position:relative;
+    left:-25px;
+    top:15%;
+    transform: scale(0.6);
+}
+
+#app-develop-description {
+    position: absolute;
+    right:0px;
+    height: 100%;
+    width:60%;
+    background-color:rgb(44, 44, 44);;
+    color: white;
 }
