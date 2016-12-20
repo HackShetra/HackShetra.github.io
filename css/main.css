@@ -25,11 +25,12 @@ html,body {
 .nav-list {
     z-index: 3;
     text-transform: uppercase;
-    font-size: 12px;
+    /*font-size: 12px;*/
+    font-size: 1vw;
     font-weight: 700;
     height : 60px;
     position:absolute;
-    right:50px;
+    right:15px;
 }
 
 .nav-list_item {
