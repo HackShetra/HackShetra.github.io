@@ -172,7 +172,7 @@ html,body {
     position: relative;
     width: 100%;
     top :25%;
-    padding-left: 10px;
+    padding-left: 20px;
     padding-right: 5px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -238,7 +238,7 @@ html,body {
     position: relative;
     width: 100%;
     top :40%;
-    padding-left: 10px;
+    padding-left: 20px;
     padding-right: 5px;
     /*text-align: center;*/
 }
