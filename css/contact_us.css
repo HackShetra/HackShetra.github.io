@@ -90,3 +90,23 @@
     text-transform: uppercase;
     transform: translate(-50%, -50%);
 }
+
+@media (max-width : 960px) {
+    #contact-left-section {
+        height: 80px;
+        width: 100%;
+    }
+
+    .locationSVG {
+        display: none;
+    }
+
+    #contact-right-section  {
+        width: 100%;
+    }
+
+    #contact-right-section .mini-section{
+        overflow: auto;
+    }
+
+}
