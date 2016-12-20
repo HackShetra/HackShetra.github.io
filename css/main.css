@@ -99,9 +99,16 @@ html,body {
 }
 
 .heading {
-    font-size: 12px;
+    position: relative;
     margin: 0px;
-    /*border: 1px solid green;*/
+    font-size: 1.5vw;
+    color: white;
+    padding: 0px;
+    line-height: 80px;
+    word-space: 4em;
+    letter-spacing: 0.05em;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 
 /*css for the contact section */
@@ -129,8 +136,14 @@ html,body {
     width:50%;
     /*visibility:hidden;*/
     transform:translate(-50%, 0%);
+    top:0px;
     /*border: 2px solid red;*/
 }
 
+.mini-section {
+}
 /* css for the contact section ends here */
 
+.footer {
+
+}

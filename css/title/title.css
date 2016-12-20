@@ -11,7 +11,7 @@
   width: 100%;
   color: white; }
 
-h1 {
+.titleWrapper h1 {
   color: white;
   font-size: 80px;
   margin: 0;
@@ -24,7 +24,7 @@ h1 {
   word-space: 4em;
   letter-spacing: 0.05em; }
 
-h1 span {
+.titleWrapper h1 span {
   position: relative;
   display: inline-block;
   transform: translateY(100%);
