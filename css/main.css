@@ -106,6 +106,7 @@ html,body {
     text-align: center;
     width: 100%;
     color:white;
+    background-color : transparent;
     /*border: 2px solid black;*/
 }
 
@@ -302,7 +303,7 @@ html,body {
     width: 100%;
     margin: 0px;
     padding: 0px;
-    top:55vh;
+    top:52vh;
     z-index: 2;
     transition: all 1s ease;
 }

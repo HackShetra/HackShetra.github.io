@@ -26,6 +26,7 @@
     text-transform: uppercase;
     word-space: 4em;
     letter-spacing: 0.05em;
+    background-color: transparent;
 }
 
 .titleWrapper h1 span {
