@@ -13,13 +13,15 @@ html,body {
 }
 
 .page_header {
-    position: relative;
+    position: fixed;
     top : 0px;
     margin:0 auto;
     width:100%;
-    height : 60px;
+    height : 10vh;
     display: block;
+    z-index: 5;
     background: rgb(44, 44, 44);
+    font-family: "Montserrat", sans-serif;
 }
 
 .nav-list {
@@ -42,7 +44,7 @@ html,body {
     text-align: center;
     vertical-align: middle;
     display:table-cell;
-    height:60px;
+    height : 10vh;
     padding-left: 20px;
     padding-right: 20px;
     text-decoration: none;
@@ -52,19 +54,20 @@ html,body {
 .nav-list_item:hover {
     /*background-color: white;*/
     /*color: rgb(44, 44, 44);*/
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
 }
 
 .section {
     position:relative;
     left: 0;
-    top:0;
+    top:60px;
     height: 100%;
 }
 
-.home {
-    height:91%;
-}
+/*.home {*/
+    /*height:160%;*/
+/*}*/
+
 
 .construction-demo {
     height:300px;
@@ -111,6 +114,7 @@ html,body {
     letter-spacing: 0.05em;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+    top:40px;
 }
 
 /*css for the contact section */
@@ -144,10 +148,6 @@ html,body {
     /*border: 2px solid red;*/
 }
 
-.mini-section {
-    /*border-bottom: 2px solid black;*/
-}
-
 /* css for the about section start here */
 .about-section {
 }
@@ -171,7 +171,7 @@ html,body {
     font-size: 1.6vw;
     position: relative;
     width: 100%;
-    top :25%;
+    top :28%;
     padding-left: 20px;
     padding-right: 5px;
     font-family: 'Montserrat', sans-serif;
@@ -202,6 +202,7 @@ html,body {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     text-align: center;
+    top:35px;
 }
 
 #app-develop-section {
@@ -262,10 +263,12 @@ html,body {
 }
 
 #sponsor-section h1 {
+    position: absolute;
+    top : 60px;
     width: 100%;
     text-align: center;
-    padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 1.5vw;
 }
 
 /* FAQ asked here */
@@ -279,6 +282,8 @@ html,body {
 #faq-section h1 {
     width: 100%;
     text-align: center;
-    padding-top: 20px;
+    position: absolute;
+    top : 60px;
     padding-bottom: 20px;
+    font-size: 1.5vw;
 }

@@ -93,8 +93,17 @@
 
 @media (max-width : 960px) {
     #contact-left-section {
-        height: 80px;
+        height: 100px;
         width: 100%;
+    }
+
+    .heading {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        height: 90%;
+        top:30px;
+        padding-top: 5px;
     }
 
     .locationSVG {
