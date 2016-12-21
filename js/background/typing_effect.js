@@ -61,6 +61,12 @@
                 new CreateTypingEffect(textRotate[i], JSON.parse(toRotateText), period);
             }
         }
+
+        // css for adding the blink
+        var css = document.createElement('style');
+        css.type = "text/css";
+        css.innerHTML = ".txt-rotate > .typing-text { border-right : 0.08em solid white } ";
+        document.body.appendChild(css);
     });
 
 })(jQuery, window, document);
