@@ -9,7 +9,7 @@ html,body {
     height:100%;
     width:100%;
     font-family: "Gotham SSm A","Gotham SSm B",Helvetica,Arial,sans-serif;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 .page_header {
@@ -60,7 +60,7 @@ html,body {
 .section {
     position:relative;
     left: 0;
-    top:60px;
+    top:0px;
     height: 100%;
 }
 
@@ -264,7 +264,7 @@ html,body {
 
 #sponsor-section h1 {
     position: absolute;
-    top : 60px;
+    top : 65px;
     width: 100%;
     text-align: center;
     padding-bottom: 20px;
@@ -283,7 +283,7 @@ html,body {
     width: 100%;
     text-align: center;
     position: absolute;
-    top : 60px;
-    padding-bottom: 20px;
+    top : 65px;
+    padding-bottom:20px;
     font-size: 1.5vw;
 }
