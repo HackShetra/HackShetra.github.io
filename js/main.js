@@ -58,4 +58,14 @@
         _MainFunctions.ResizeAboutAppSection();
     });
 
+    // for slow scrolling
+    $(d).ready(function() {
+        $('a').click(function(){
+            $('html, body').animate({
+                scrollTop: $( $(this).attr('href') ).offset().top
+            }, 500);
+            return false;
+        });
+    });
+
 })(jQuery, document, window);
