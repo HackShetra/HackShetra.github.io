@@ -225,7 +225,7 @@ html,body {
     right:0px;
     height: 100%;
     width:60%;
-    background-color:rgb(44, 44, 44);;
+    background-color:rgb(44, 44, 44);
     color: white;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
@@ -253,5 +253,32 @@ html,body {
     color : rgb(255, 87, 34);
 }
 
-@media (max-width : 960px) {
+/* css for the sponsor section */
+#sponsor-section {
+    background-color:rgb(44, 44, 44);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+#sponsor-section h1 {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* FAQ asked here */
+#faq-section {
+    background-color:rgb(44, 44, 44);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+#faq-section h1 {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
