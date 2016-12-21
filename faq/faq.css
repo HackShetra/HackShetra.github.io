@@ -30,5 +30,5 @@ body {
 	height: auto;
 	word-wrap: all;
 	cursor: pointer;
-	transition: all 1s ease;
+	/*transition: all 1s ease;*/
 }
