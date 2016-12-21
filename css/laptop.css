@@ -290,7 +290,7 @@
 
     .wrap {
         /*display: none;*/
-        transform: scale(0.8);
+        transform: scale(0.5);
         width: 100%;
         height: 50%;
         top:90px;

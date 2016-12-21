@@ -58,6 +58,8 @@
 
 #contact-right-section section.wipe-right {
     background-color: #efc94c;
+    z-index:4;
+    padding-top: 85px;
 }
 
 #contact-right-section section.wipe-right:after {
@@ -116,6 +118,18 @@
 
     #contact-right-section .mini-section{
         overflow: auto;
+    }
+
+    #contact-right-section section.wipe-right {
+        padding-top: 25px;
+    }
+
+    #contact-right-section section.wipe-down {
+        padding-top: 0px;
+    }
+
+    #contact-right-section section.wipe-left {
+        padding-top: 0px;
     }
 
 }
