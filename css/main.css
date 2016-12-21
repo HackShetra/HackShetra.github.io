@@ -67,10 +67,11 @@ html,body {
     top:0px;
     height: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 /*.home {*/
-    /*height:160%;*/
+/*height:160%;*/
 /*}*/
 
 
@@ -292,3 +293,28 @@ html,body {
     padding-bottom:20px;
     font-size: 1.5vw;
 }
+
+/* css for the typing effect */
+.typing_effect {
+    position: absolute;
+    color : white;
+    border: 2px solid white;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    top:60px;
+    z-index: 2;
+    height: 20px;
+}
+
+.typing_effect h1 {
+    width: 100%;
+    text-align: center;
+    height: 20px;
+    border: 2px solid white;
+}
+
+.typing-text {
+    color: orange;
+}
+
