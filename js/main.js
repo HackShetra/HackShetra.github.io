@@ -55,25 +55,26 @@
         
         ApplyOnMouseOverEventOnMenuItem : function(element) {
             $(element).on('mouseover', function() {
-                $(this).css({
-                    'color' : menuColors.selectedItem
-                });
+                _MainFunctions.SelectMenuItem($(this));
             });
         },
         
         ApplyOnMouseOutEventOnMenuItem : function (element) {
             $(element).on('mouseout', function(){
-                $(this).css({
-                    'color' : menuColors.deSelectedItem
-                });
+                _MainFunctions.DeSelectMenuItem($(this));
             });
         },
 
         SelectMenuItem : function(element) {
+            $(element).css({
+                'color' : menuColors.selectedItem
+            });
         },
 
-        DeSelectMenuItem : function() {
-
+        DeSelectMenuItem : function(element) {
+            $(element).css({
+                'color' : menuColors.deSelectedItem
+            });
         }
     }
 
@@ -89,42 +90,27 @@
 
     // for slow scrolling and selected menu item
     $(d).ready(function() {
-        currentSelected.css({
-            'color' : 'rgb(255, 87, 34)',
-        });
-        previousSelected = currentSelected;
-        console.log(previousSelected);
-        $('.nav-list a').click(function(){
 
+        $(w).scroll(function(d) {
+            // console.log($(d).height());
+            console.log($('body').scrollTop());
+        });
+
+        _MainFunctions.SelectMenuItem(currentSelected);
+        $('.nav-list a').click(function(){
             _MainFunctions.ApplyOnMouseOverEventOnMenuItem($('.nav-list a'));
             _MainFunctions.ApplyOnMouseOutEventOnMenuItem($('.nav-list a'));
-
-            $('.nav-list a').css({
-                'color' : 'white'
-            });
-
-            // $(this).on('mouseover', function() {
-            //     $(this).css({
-            //         'color' : 'rgb(255, 87, 34)'
-            //     });
-            // });
-
+            _MainFunctions.DeSelectMenuItem($('.nav-list a'));
             _MainFunctions.ApplyOnMouseOverEventOnMenuItem($(this));
             $(this).on('mouseout', function() {
-                $(this).css({
-                    'color' : 'rgb(255, 87, 34)'
-                });
+                _MainFunctions.SelectMenuItem($(this));
             });
-            $(this).css({
-                'color' : 'rgb(255, 87, 34)'
-            });
-
+            _MainFunctions.SelectMenuItem($(this));
             $('html, body').animate({
                 scrollTop: $( $(this).attr('href') ).offset().top
             }, 500);
             return false;
         });
-
     });
 
 })(jQuery, document, window);
