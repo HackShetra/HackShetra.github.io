@@ -1,27 +1,36 @@
-var q1 = document.getElementById('q1');
-var q2 = document.getElementById('q2');
+var toggle = 0;
 function answer(card) {
-	switch (card) {
-		case 1:
-			q1.style.transform = 'rotateX(360deg)';
-			q1.innerHTML = "Zero. Zip. Zilch. Nada. Nothing. InOut is free for all accepted hackers. We'll provide you with a weekend's worth of swag, meals, drinks, and snacks and a place to crash when you need a break from coding.";
-			break;
-		case 2:
-			q2.style.transform = 'rotateX(360deg)';
-			q2.innerHTML = "This hackathon is strictly a team competition. No lone crusaders please. Max team size : 3 members.";
-			break; 
+	if(toggle == 0 ) {
+		toggle = 1;
+		switch (card) {
+			case 1:
+				$('#q1').animate( { opacity : '0' }, 400, function(){
+	       				 $(this).html("Zero. Zip. Zilch. Nada. Nothing. InOut is free for all accepted hackers. We'll provide you with a weekend's worth of swag, meals, drinks, and snacks and a place to crash when you need a break from coding.").animate({'opacity': 1}, 400);    
+	    		});
+	    		 break;
+			case 2:
+				$('#q2').animate( { opacity : '0' }, 400, function(){
+	       				 $(this).html("This hackathon is strictly a team competition. No lone crusaders please. Max team size : 3 members.").animate({'opacity': 1}, 400);    
+	    		});
+				break; 
+		}
 	}
-	
 }
 function question(card) {
-	switch (card) {
-		case 1:
-			q1.style.transform = 'rotateX(0deg)';
-			q1.innerHTML = 'How much will it cost?';
-			break;
-		case 2:
-			q2.style.transform = 'rotateX(0deg)';
-			q2.innerHTML = "How big can a team be?";
-			break; 
+	if(toggle == 1) {
+		toggle = 0;
+
+		switch (card) {
+			case 1:
+				$('#q1').animate( { opacity : '0' }, 400, function(){
+       				 $(this).html("How much will it cost?").animate({'opacity': 1}, 400);    
+    			});
+				break;
+			case 2:
+				$('#q2').animate( { opacity : '0' }, 400, function(){
+       				 $(this).html("How big can a team be?").animate({'opacity': 1}, 400);    
+    			});
+				break; 
+		}
 	}
 }
