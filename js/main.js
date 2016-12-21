@@ -10,7 +10,13 @@
         WindowInnerWidth,
         demoCanvas = $("#demo-canvas"),
         aboutUsLaptopWrap = $('.wrap'),
-        aboutUsAppDevelopSectionWrapper = $('#app-develop-section .wrapper');
+        aboutUsAppDevelopSectionWrapper = $('#app-develop-section .wrapper'),
+        previousSelected,
+        currentSelected = $('#home_link'),
+        menuColors = {
+            'selectedItem' : 'rgb(255, 87, 34)',
+            'deSelectedItem' : 'white'
+        };
 
     var _MainFunctions = {
 
@@ -45,6 +51,29 @@
             else if(w.innerWidth < 1320 && w.innerWidth > 1134 ) {
                 aboutUsAppDevelopSectionWrapper.css('transform', 'scale(0.4)');
             }
+        },
+        
+        ApplyOnMouseOverEventOnMenuItem : function(element) {
+            $(element).on('mouseover', function() {
+                $(this).css({
+                    'color' : menuColors.selectedItem
+                });
+            });
+        },
+        
+        ApplyOnMouseOutEventOnMenuItem : function (element) {
+            $(element).on('mouseout', function(){
+                $(this).css({
+                    'color' : menuColors.deSelectedItem
+                });
+            });
+        },
+
+        SelectMenuItem : function(element) {
+        },
+
+        DeSelectMenuItem : function() {
+
         }
     }
 
@@ -58,14 +87,44 @@
         _MainFunctions.ResizeAboutAppSection();
     });
 
-    // for slow scrolling
+    // for slow scrolling and selected menu item
     $(d).ready(function() {
-        $('a').click(function(){
+        currentSelected.css({
+            'color' : 'rgb(255, 87, 34)',
+        });
+        previousSelected = currentSelected;
+        console.log(previousSelected);
+        $('.nav-list a').click(function(){
+
+            _MainFunctions.ApplyOnMouseOverEventOnMenuItem($('.nav-list a'));
+            _MainFunctions.ApplyOnMouseOutEventOnMenuItem($('.nav-list a'));
+
+            $('.nav-list a').css({
+                'color' : 'white'
+            });
+
+            // $(this).on('mouseover', function() {
+            //     $(this).css({
+            //         'color' : 'rgb(255, 87, 34)'
+            //     });
+            // });
+
+            _MainFunctions.ApplyOnMouseOverEventOnMenuItem($(this));
+            $(this).on('mouseout', function() {
+                $(this).css({
+                    'color' : 'rgb(255, 87, 34)'
+                });
+            });
+            $(this).css({
+                'color' : 'rgb(255, 87, 34)'
+            });
+
             $('html, body').animate({
                 scrollTop: $( $(this).attr('href') ).offset().top
             }, 500);
             return false;
         });
+
     });
 
 })(jQuery, document, window);

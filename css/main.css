@@ -57,8 +57,8 @@ html,body {
 
 .nav-list_item:hover {
     /*background-color: white;*/
-    /*color: rgb(44, 44, 44);*/
-    border-bottom: 1px solid white;
+    color: rgb(255, 87, 34);
+    /*border-bottom: 2px solid white;*/
 }
 
 .section {
@@ -66,6 +66,7 @@ html,body {
     left: 0;
     top:0px;
     height: 100%;
+    overflow-x: hidden;
 }
 
 /*.home {*/
