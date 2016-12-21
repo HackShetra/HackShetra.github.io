@@ -2,7 +2,7 @@
  *  @author : abhishek goswami (hiro)
  *  @github : abhishekg785
  *
- *  main.js
+ *  main.js : simply for managing responsiveness of various section
  */
 
 (function($, d, w) {
@@ -11,7 +11,6 @@
         demoCanvas = $("#demo-canvas"),
         aboutUsLaptopWrap = $('.wrap'),
         aboutUsAppDevelopSectionWrapper = $('#app-develop-section .wrapper'),
-        previousSelected,
         currentSelected = $('#home_link'),
         menuColors = {
             'selectedItem' : 'rgb(255, 87, 34)',
@@ -90,12 +89,6 @@
 
     // for slow scrolling and selected menu item
     $(d).ready(function() {
-
-        $(w).scroll(function(d) {
-            // console.log($(d).height());
-            console.log($('body').scrollTop());
-        });
-
         _MainFunctions.SelectMenuItem(currentSelected);
         $('.nav-list a').click(function(){
             _MainFunctions.ApplyOnMouseOverEventOnMenuItem($('.nav-list a'));
