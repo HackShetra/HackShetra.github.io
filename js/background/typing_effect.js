@@ -31,7 +31,7 @@
         }
         this.element.innerHTML = '<span class = "typing-text">'+ this.txt + '</span>';
         var that = this;
-        var delta = 300 - Math.random() * 100;
+        var delta = 200 - Math.random() * 100;
         if(this.isDeleting) {
             delta /= 2;
         }
