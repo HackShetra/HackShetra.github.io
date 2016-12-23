@@ -368,3 +368,26 @@ html,body {
 .footer span {
     color: red;
 }
+
+/** sponsor section comes here */
+.sponsor-logo-section {
+    background: white;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.sponsor-logo-section img {
+    max-width: 20%;
+    max-height: 10%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.sponsor-logo-section div {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
