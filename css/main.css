@@ -380,7 +380,7 @@ html,body {
 }
 
 .sponsor-logo-section img {
-    height: 3.5vw;
+    height: 5.5vw;
     /*max-width: 20%;*/
     /*max-height: 5%;*/
     margin-left: 30px;
@@ -398,7 +398,7 @@ html,body {
 @media (max-width : 960px) {
 
     .sponsor-logo-section img {
-        height: 5vw;
+        height: 8vw;
         margin-left: 30px;
         margin-right: 30px;
     }
