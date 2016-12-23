@@ -261,23 +261,6 @@ html,body {
     color : rgb(255, 87, 34);
 }
 
-/* css for the sponsor section */
-#sponsor-section {
-    background-color:rgb(44, 44, 44);
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-}
-
-#sponsor-section h1 {
-    position: absolute;
-    top : 65px;
-    width: 100%;
-    text-align: center;
-    padding-bottom: 20px;
-    font-size: 1.5vw;
-}
-
 /* FAQ asked here */
 #faq-section {
     background-color:rgb(44, 44, 44);
@@ -370,31 +353,57 @@ html,body {
 }
 
 /** sponsor section comes here */
+
+#sponsor-section {
+    background-color:rgb(44, 44, 44);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    background-color: white;
+}
+
+#sponsor-section h1 {
+    position: absolute;
+    top : 65px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5vw;
+    background-color: white;
+    color : rgba(44, 44, 44);
+}
+
 .sponsor-logo-section {
     /*display:none;*/
     background: white;
     width: 100%;
     position: absolute;
-    top: 85px;
+    top:90px;
     left: 0px;
-    border: 5px solid black;
-    position: relative;
-    height: auto;
-    z-index: 7;
+    height: 100%;
 }
 
 .sponsor-logo-section img {
-    max-width: 20%;
-    max-height: 5%;
+    height: 3.5vw;
+    /*max-width: 20%;*/
+    /*max-height: 5%;*/
     margin-left: 30px;
     margin-right: 30px;
 }
 
 .sponsor-logo-section div {
-    border: 2px solid red;
     width: 100%;
     height: auto;
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
+}
+
+@media (max-width : 960px) {
+
+    .sponsor-logo-section img {
+        height: 5vw;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
 }
