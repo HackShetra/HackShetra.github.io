@@ -370,6 +370,8 @@ html,body {
     font-size: 1.5vw;
     background-color: white;
     color : rgba(44, 44, 44);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 
 .sponsor-logo-section {
