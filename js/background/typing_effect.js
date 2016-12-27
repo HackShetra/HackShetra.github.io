@@ -23,11 +23,9 @@
 
         if(this.isDeleting) {
             this.txt = fullText.substring(0, this.txt.length - 1);
-            console.log(this.txt);
         }
         else {
             this.txt = fullText.substring(0, this.txt.length + 1);
-            console.log(this.txt);
         }
         this.element.innerHTML = '<span class = "typing-text">'+ this.txt + '</span>';
         var that = this;

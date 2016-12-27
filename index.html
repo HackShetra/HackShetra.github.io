@@ -27,20 +27,6 @@
     </div>
 </header>
 
-<!-- hover navigation section -->
-<section id = "hover-navigation">
-    <nav class="menu-001">
-        <ul>
-            <li><a href="#home-section">Home</a></li>
-            <li><a href="#about-section">About</a></li>
-            <li><a href="#faq-section">FAQ</a></li>
-            <li><a href="#sponsor-section">Sponsors</a></li>
-            <li><a href="#contact-section">Contact</a></li>
-        </ul>
-    </nav>
-</section>
-<!-- navigation section ends here -->
-
 <section id = "home-section" class = "home-section home section">
     <h1>Techspardha'17</h1>
     <div class = "titleWrapper">
@@ -354,18 +340,18 @@
     </div>
     <div id = "contact-right-section">
         <section class = "wipe-right mini-section email-section">
-            <span>Our email address &nbsp;&nbsp;&nbsp;&nbsp;( Feel free to ask anything! We do reply :)</span><br/><br/>
+            <span>Our email address</span><br/><br/>
             <span>hackatnitkkr@gmail.com</span>
         </section>
         <section class = "wipe-down mini-section coordinator-section">
-            <span>Contact our Coordinators &nbsp;&nbsp;&nbsp;&nbsp;( Let's Talk :P )</span><br/><br/>
+            <span>Contact our Coordinators</span><br/><br/>
             <span>Abhishek Goswami : 9991016038</span><br/>
             <span>Jatin Miglani: 9991016038</span><br/>
             <span>Abhinandan Sharma: 9996999065</span>
         </section>
         <section class = "wipe-left mini-section location-section">
             <span>
-                Directions to reach us <br/>( Google baba Zindabad! You are smart :P )<br/><br/>
+                Directions to reach us <br/><br/><br/>
                 National Institute of Technology, Kurukshetra<br/>
                 Thanesar, Haryana<br/>
                 136119
@@ -387,31 +373,6 @@
 <script src = "js/background/typing_effect.js"></script>
 <script src = "js/title/title.js"></script>
 <script src = "js/FAQ.js"></script>
-<script>
-    $(".menu-001 a").each(function(){
-        var item = $(this).html();
-        $(this).append('<span class="hover">'+item+'</span>');
-    });
-
-    var classes = ["mobile", "tablet", "laptop"];
-    var i = 0;
-
-    $('#morph').addClass(classes[i]);
-    i++
-
-    function morph() {
-        $('#morph').removeClass();
-        $('#morph').addClass(classes[i]);
-        if (i > classes.length - 2){
-            i = 0;
-//            console.log(i);
-        } else {
-            i++;
-//            console.log(i);
-        };
-    };
-    setInterval(morph, 2000);
-</script>
-<!-- script ends here -->
+<script src = "js/about/index.js"></script>
 </body>
 </html>
