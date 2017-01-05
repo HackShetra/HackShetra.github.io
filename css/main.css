@@ -482,6 +482,7 @@ html,body {
 }
 
 @media (max-width: 420px) {
+
     .nav-list_item {
         font-size: 2em;
     }
@@ -508,5 +509,16 @@ html,body {
         width:100px;
         height: 35px;
         font-size: 10px;
+    }
+
+    .qCard {
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .nav-list_item {
+        font-size: 1.5em;
     }
 }
