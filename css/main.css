@@ -474,9 +474,39 @@ html,body {
 @media (max-width : 960px) {
 
     .sponsor-logo-section img {
-        height: 8vw;
-        margin-left: 30px;
-        margin-right: 30px;
+        height: 6vw;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
+}
+
+@media (max-width: 420px) {
+    .nav-list_item {
+        font-size: 2em;
+    }
+
+    #info-section {
+        top : 45vh;
+    }
+
+    #info-section span {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 2vw;
+    }
+
+    .typing_effect {
+        top:52vh;
+    }
+
+    .typing_effect h1 {
+        font-size: 0.6em;
+    }
+
+    #button-section button {
+        width:100px;
+        height: 35px;
+        font-size: 10px;
+    }
 }
