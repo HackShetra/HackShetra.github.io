@@ -306,7 +306,7 @@ Constraint.prototype.draw = function(ctx, stress) {
 
 //-------------------------------------------------
 
-var JSVerlet = function(canvas, options) {
+var DoAnimate = function(canvas, options) {
 
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
@@ -433,7 +433,7 @@ var JSVerlet = function(canvas, options) {
     }
 };
 
-JSVerlet.prototype.draw = function(ctx) {
+DoAnimate.prototype.draw = function(ctx) {
 
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
@@ -472,7 +472,7 @@ JSVerlet.prototype.draw = function(ctx) {
     }
 };
 
-JSVerlet.prototype.update = function(iter) {
+DoAnimate.prototype.update = function(iter) {
 
     if(this.key.ctrl) return;
 
@@ -503,7 +503,7 @@ JSVerlet.prototype.update = function(iter) {
     }
 };
 
-JSVerlet.prototype.remove_point = function(point) {
+DoAnimate.prototype.remove_point = function(point) {
 
     var i = this.constraints.length;
     while (i--) {
@@ -517,7 +517,7 @@ JSVerlet.prototype.remove_point = function(point) {
         this.points.splice(this.points.indexOf(point), 1);
 };
 
-JSVerlet.prototype.get_mouse_point = function() {
+DoAnimate.prototype.get_mouse_point = function() {
 
     var closest;
 
@@ -536,7 +536,7 @@ JSVerlet.prototype.get_mouse_point = function() {
     return closest;
 };
 
-JSVerlet.prototype.add_point = function(x, y, fixed) {
+DoAnimate.prototype.add_point = function(x, y, fixed) {
 
     var point = new Point(x, y, fixed);
 
@@ -545,12 +545,12 @@ JSVerlet.prototype.add_point = function(x, y, fixed) {
     return point;
 };
 
-JSVerlet.prototype.add_constraint = function(p1, p2) {
+DoAnimate.prototype.add_constraint = function(p1, p2) {
 
     this.constraints.push(new Constraint(p1, p2));
 };
 
-JSVerlet.prototype.add_shape = function(shapes) {
+DoAnimate.prototype.add_shape = function(shapes) {
 
     if(!(shapes instanceof Array)) {
 
@@ -620,7 +620,7 @@ window.onload = function() {
     canvas.height = 340;//window.innerHeight;
     var ctx = canvas.getContext('2d');
 
-    var jsv = new JSVerlet(canvas, {drag: true, edit: true, show_stress: true});
+    var jsv = new DoAnimate(canvas, {drag: true, edit: true, show_stress: true});
 
     // demo scene ------------------------------
 

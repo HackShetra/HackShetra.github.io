@@ -61,6 +61,72 @@ html,body {
     /*border-bottom: 2px solid white;*/
 }
 
+#button-section {
+    position: absolute;
+    bottom: 100px;
+    z-index:5;
+    width: 100%;
+    text-align: center;
+}
+
+#button-section button {
+    background-color: rgb(44, 44, 44);
+    color: white;
+    /*border: 2px solid rgb(255, 87, 34);*/
+    border: 2px solid white;
+    font-family: "Montserrat", sans-serif;
+    /*text-transform: uppercase;*/
+    width: 180px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    letter-spacing: 1px;
+}
+
+#button-section button:hover {
+    background-color: white;
+    color: rgb(44, 44, 44);
+}
+
+#info-section {
+    position: absolute;
+    z-index: 5;
+    width:100%;
+    top:49vh;
+    z-index: 5;
+    color:white;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+#info-section span {
+    display: inline-block;
+    border-right: 2px solid white;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-transform: uppercase;
+    font-size: 1.1vw;
+}
+
+#info-section span:nth-child(1):hover {
+    border-bottom: none;
+}
+
+#info-section span:nth-child(3) {
+    border-right: none;
+}
+
+#info-section span:hover{
+    border-bottom: 1px dashed white;
+    cursor: pointer;
+}
+
+#info-section a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
 .section {
     position:relative;
     left: 0;
@@ -138,6 +204,16 @@ html,body {
     margin:0px;
     color:white;
     font-family: 'Montserrat', sans-serif;
+}
+
+#contact-right-section .email-section span a {
+    text-decoration: none;
+    text-transform: none;
+    color: white;
+}
+
+#contact-right-section .email-section span a:hover {
+    border: 1px dashed white;
 }
 
 .locationSVG {
@@ -304,7 +380,7 @@ html,body {
     width: 100%;
     margin: 0px;
     padding: 0px;
-    top:52vh;
+    top:58vh;
     z-index: 2;
     transition: all 1s ease;
 }
