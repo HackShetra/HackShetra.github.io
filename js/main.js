@@ -104,6 +104,11 @@
             }, 500);
             return false;
         });
+
+        // take user to the apply form
+        $('#apply-button').on('click', function() {
+           w.open('apply.html', '_blank');
+        });
     });
 
 })(jQuery, document, window);
