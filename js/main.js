@@ -2,7 +2,7 @@
  *  @author : abhishek goswami (hiro)
  *  @github : abhishekg785
  *
- *  main.js : simply for managing responsiveness of various section
+ *  main.js
  */
 
 (function($, d, w) {
@@ -11,13 +11,20 @@
         demoCanvas = $("#demo-canvas"),
         aboutUsLaptopWrap = $('.wrap'),
         aboutUsAppDevelopSectionWrapper = $('#app-develop-section .wrapper'),
-        currentSelected = $('#home_link'),
+        currentSelectedLink = $('#home_link'),
         menuColors = {
             'selectedItem' : 'rgb(255, 87, 34)',
             'deSelectedItem' : 'white'
-        };
+        },
+        currentSelectedSectionIndex = 0,
+        currentSelectedSection = '#home-section';
 
     var _MainFunctions = {
+
+        init : function() {
+            _MainFunctions.scrollBodyTop(0);
+            _MainFunctions.SelectMenuItem(currentSelectedLink);
+        },
 
         /**
          * function resizes the background of the home page
@@ -31,7 +38,7 @@
             });
         },
 
-        ResizeAboutUsSection : function(name) {
+        ResizeAboutUsSection : function() {
             if(w.innerWidth >= 960) {
                 aboutUsLaptopWrap.css('transform', 'scale(1)');
             }
@@ -51,18 +58,6 @@
                 aboutUsAppDevelopSectionWrapper.css('transform', 'scale(0.4)');
             }
         },
-        
-        ApplyOnMouseOverEventOnMenuItem : function(element) {
-            $(element).on('mouseover', function() {
-                _MainFunctions.SelectMenuItem($(this));
-            });
-        },
-        
-        ApplyOnMouseOutEventOnMenuItem : function (element) {
-            $(element).on('mouseout', function(){
-                _MainFunctions.DeSelectMenuItem($(this));
-            });
-        },
 
         SelectMenuItem : function(element) {
             $(element).css({
@@ -74,40 +69,64 @@
             $(element).css({
                 'color' : menuColors.deSelectedItem
             });
+        },
+
+        scrollBodyTop : function(val) {
+            $('html, body').animate({
+                scrollTop : val
+            }, 500);
         }
     }
 
     $(w).on('resize', function(d) {
-        console.log({
-            'innerWidth' : w.innerWidth,
-            'innerHeight' : w.innerHeight
-        });
         _MainFunctions.ResizeHomeBackgroundCanvas();
         _MainFunctions.ResizeAboutUsSection();
         _MainFunctions.ResizeAboutAppSection();
+        $(w).scroll();  // to fix the problem occurs in the link selection due to scrolling
     });
 
     // for slow scrolling and selected menu item
     $(d).ready(function() {
-        _MainFunctions.SelectMenuItem(currentSelected);
-        $('.nav-list a').click(function(){
-            _MainFunctions.ApplyOnMouseOverEventOnMenuItem($('.nav-list a'));
-            _MainFunctions.ApplyOnMouseOutEventOnMenuItem($('.nav-list a'));
-            _MainFunctions.DeSelectMenuItem($('.nav-list a'));
-            _MainFunctions.ApplyOnMouseOverEventOnMenuItem($(this));
-            $(this).on('mouseout', function() {
+        _MainFunctions.init();
+        $('.nav-list a').click(function() {
+            var clickedLinkSection = $(this).attr('href');
+            if(!(currentSelectedSection == clickedLinkSection)) {
+                _MainFunctions.DeSelectMenuItem(currentSelectedLink);
                 _MainFunctions.SelectMenuItem($(this));
-            });
-            _MainFunctions.SelectMenuItem($(this));
-            $('html, body').animate({
-                scrollTop: $( $(this).attr('href') ).offset().top
-            }, 500);
+                _MainFunctions.scrollBodyTop($( $(this).attr('href') ).offset().top);
+                currentSelectedSection = clickedLinkSection;
+                currentSelectedLink = $(this);
+            }
             return false;
         });
 
         // take user to the apply form
         $('#apply-button').on('click', function() {
-           w.open('apply.html', '_blank');
+            w.open('apply.html', '_blank');
+        });
+
+        // controlling the links according to the view the user is on
+        $(w).scroll(function() {
+            var index = $(w).scrollTop() / $(w).height(),
+                errorFactor = 0.1,
+                linkIndex = Math.floor(index + errorFactor);
+            if(linkIndex == 2) {
+                return;
+            }
+            else if(linkIndex > 2){
+                linkIndex -= 1;
+            }
+            if(!(linkIndex == currentSelectedSectionIndex)) {
+                var currentLink = $('.nav-list nav').children()[currentSelectedSectionIndex],
+                    nextSectionLink = $('.nav-list nav').children()[linkIndex];
+                $(currentLink).addClass('deactive-link');
+                $(currentLink).removeClass('active-link');
+                $(nextSectionLink).addClass('active-link');
+                $(nextSectionLink).removeClass('deactive-link');
+                currentSelectedSectionIndex = linkIndex;
+                currentSelectedSection = $(nextSectionLink).attr('href');
+                currentSelectedLink = nextSectionLink;
+            }
         });
     });
 

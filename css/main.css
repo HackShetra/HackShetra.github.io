@@ -21,7 +21,7 @@ html,body {
     height: 60px;
     /*height : 10vh;*/
     display: block;
-    z-index: 5;
+    z-index: 6;
     background: rgb(44, 44, 44);
     font-family: "Montserrat", sans-serif;
     overflow: hidden;
@@ -55,10 +55,18 @@ html,body {
     color: white;
 }
 
-.nav-list_item:hover {
-    /*background-color: white;*/
-    color: rgb(255, 87, 34);
-    /*border-bottom: 2px solid white;*/
+/*.nav-list_item:hover {*/
+    /*!*background-color: white;*!*/
+    /*color: rgb(255, 87, 34);*/
+    /*!*border-bottom: 2px solid white;*!*/
+/*}*/
+
+.active-link {
+    color: rgb(255, 87, 34) !important;
+}
+
+.deactive-link {
+    color: white !important;
 }
 
 #button-section {

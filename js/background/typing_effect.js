@@ -54,7 +54,6 @@
         for(var i = 0 ; i < textRotate.length; i++) {
             var toRotateText = textRotate[i].getAttribute('data-rotate');
             var period = textRotate[i].getAttribute('data-period');
-            console.log(toRotateText);
             if(toRotateText) {
                 new CreateTypingEffect(textRotate[i], JSON.parse(toRotateText), period);
             }
